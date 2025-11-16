@@ -198,13 +198,3 @@ autoware_ws/
 ---
 
 # 🎉 You're Ready to Run Autoware + AWSIM!
-
-If you want, I can also generate:
-
-✅ `setup.sh` auto-installer
-✅ Docker Compose version
-✅ Jetson Orin optimized launch script
-✅ A visual architecture diagram
-✅ A LinkedIn post announcing your project
-
-Just tell me!
