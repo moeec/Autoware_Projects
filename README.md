@@ -199,3 +199,24 @@ autoware_ws/
 ---
 
 # 🎉 You're Ready to Run Autoware + AWSIM!
+
+
+#Tr Additional troubleshooting
+
+
+If you run into docker running issues move the following file:
+
+sudo mv /etc/docker/daemon.json /etc/docker/daemon.json.bak
+
+sudo docker run -it \
+    --name autoware_latest \
+    --net=host \
+    --privileged \
+    --shm-size=2g \
+    -v /home/mwesideveloper/autoware_ws/autoware:/wc_ws \
+    -w /wc_ws \
+    -e DISPLAY=$DISPLAY \
+    -e QT_X11_NO_MITSHM=1 \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    ghcr.io/autowarefoundation/autoware:universe-devel-cuda \
+    bash
