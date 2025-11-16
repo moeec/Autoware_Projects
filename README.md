@@ -8,9 +8,11 @@ This README provides a complete workflow for setting up **Autoware** with **AWSI
 
 ---
 
-## 📦 1. Clone the Autoware Repository
+## 📦 1. Create Autoware Wokrsapce, Clone the Autoware Repository
 
 ```bash
+mkdir -p autoware_ws/src
+
 git clone https://github.com/autowarefoundation/autoware.git
 ```
 
@@ -19,11 +21,10 @@ git clone https://github.com/autowarefoundation/autoware.git
 ## 📁 2. Prepare the Autoware Workspace
 
 ```bash
-cd autoware
-mkdir src
+cd autoware/src
 vcs import src < autoware.repos
 ```
-
+You must run vcs import from inside the cloned Autoware repo, where the .repos files live.
 ---
 
 ## 🛠️ 3. (Optional) Pull Nightly Development Code
