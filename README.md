@@ -206,6 +206,7 @@ autoware_ws/
 
 If you run into docker running issues move the following file:
 
+```bash
 sudo mv /etc/docker/daemon.json /etc/docker/daemon.json.bak
 
 sudo docker run -it \
@@ -220,3 +221,4 @@ sudo docker run -it \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     ghcr.io/autowarefoundation/autoware:universe-devel-cuda \
     bash
+```bash
